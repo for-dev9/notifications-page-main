@@ -84,8 +84,18 @@ a:hover {
   text-decoration: none;
 }
 
+.nav .notification h1 {
+  color: var(--Very-dark-blue);
+}
+
 .content div {
   background-color: var(--Very-light-grayish-blue);
   padding: 20px;
   margin: 8px;
+  display: flex;
+  column-gap: 10px;
+}
+
+.content div img {
+  width: 45px;
 }
