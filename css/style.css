@@ -1,0 +1,91 @@
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+  --Gap: 30px;
+}
+
+.attribution {
+  padding: 22px;
+  font-family: 'tahoma';
+  font-size: 13px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: var(--Very-light-grayish-blue);
+}
+
+a {
+  color: var(--Dark-grayish-blue);
+  transition: 0.3s ease-in;
+}
+
+a:hover {
+  color: var(--Blue);
+  transition: 0.3s ease-out;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: var(--Gap);
+  border-radius: 15px;
+  background-color: var(--White);
+  font-family: 'Plus Jakarta Sans';
+  font-size: 16px;
+  color: var(--Dark-grayish-blue);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: top;
+  padding-bottom: var(--Gap);
+}
+
+.nav h1 {
+  padding: 0px 10px 0px 0px;
+  margin: 0px;
+  display: inline;
+}
+
+.nav span {
+  background-color: var(--Blue);
+  display: inline-block;
+  width: var(--Gap);
+  padding: 1px 0px 1px 0px;
+  border-radius: 5px;
+  color: var(--White);
+  font-weight: bold;
+  text-align: center;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.content div {
+  background-color: var(--Very-light-grayish-blue);
+  padding: 20px;
+  margin: 8px;
+}
