@@ -33,33 +33,96 @@
             <h1>Notifications</h1>
             <span id="notification">3</span>
           </div>
-          <a href="javascript:clearNotification();">Mark all as read</a>
+          <a href="javascript:markAllRead();">Mark all as read</a>
         </nav>
 
         <div class="content">
-          <div>
+          <div class="bg unread">
             <img src="/assets/images/avatar-mark-webber.webp" />
-            Mark Webber reacted to your recent post My first tournament today!
-            1m ago
+            <user-content>
+              <user-name>Mark Webber</user-name>
+              <user-message>reacted to your recent post</user-message>
+              <user-link1
+                ><a href="#">My first tournament today!</a></user-link1
+              >
+              <span class="mark unread"></span>
+              <user-post>1m ago</user-post>
+            </user-content>
           </div>
 
-          <div>Angela Gray followed you 5m ago</div>
-
-          <div>
-            Jacob Thompson has joined your group Chess Club 1 day ago Rizky
-            Hasanuddin sent you a private message 5 days ago Hello, thanks for
-            setting up the Chess Club. I've been a member for a few weeks now
-            and I'm already having lots of fun and improving my game.
+          <div class="bg unread">
+            <img src="/assets/images/avatar-angela-gray.webp" />
+            <user-content>
+              <user-name>Angela Gray</user-name>
+              <user-message>followed you</user-message>
+              <user-link1></user-link1>
+              <span class="mark unread"></span>
+              <user-post>5m ago</user-post>
+            </user-content>
           </div>
 
-          <div>Kimberly Smith commented on your picture 1 week ago</div>
-
-          <div>
-            Nathan Peterson reacted to your recent post 5 end-game strategies to
-            increase your win rate 2 weeks ago
+          <div class="bg unread">
+            <img src="/assets/images/avatar-jacob-thompson.webp" />
+            <user-content>
+              <user-name>Jacob Thompson</user-name>
+              <user-message>has joined your group</user-message>
+              <user-link2><a href="#">Chess Club</a></user-link2>
+              <span class="mark unread"></span>
+              <user-post>1 day ago</user-post>
+            </user-content>
           </div>
 
-          <div>Anna Kim left the group Chess Club 2 weeks ago</div>
+          <div class="bg">
+            <img src="/assets/images/avatar-rizky-hasanuddin.webp" />
+            <user-content>
+              <user-name>Rizky Hasanuddin</user-name>
+              <user-message>sent you a private message</user-message>
+              <user-link1>Chess Club</user-link1>
+              <span class="mark"></span>
+              <user-post>5 days ago</user-post>
+              <user-note>
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </user-note>
+            </user-content>
+          </div>
+
+          <div class="bg">
+            <img src="/assets/images/avatar-kimberly-smith.webp" />
+            <user-content class="imgRefer">
+              <user-content>
+                <user-name>Kimberly Smith</user-name>
+                <user-message>commented on your picture</user-message>
+                <user-post>1 week ago</user-post>
+              </user-content>
+              <img src="/assets/images/image-chess.webp" />
+            </user-content>
+          </div>
+
+          <div class="bg">
+            <img src="/assets/images/avatar-jacob-thompson.webp" />
+            <user-content>
+              <user-name>Nathan Peterson</user-name>
+              <user-message>reacted to your recent post</user-message>
+              <user-link1
+                ><a href="#"
+                  >5 end-game strategies to increase your win rate</a
+                ></user-link1
+              >
+              <user-post>2 weeks ago</user-post>
+            </user-content>
+          </div>
+
+          <div class="bg">
+            <img src="/assets/images/avatar-jacob-thompson.webp" />
+            <user-content>
+              <user-name>Anna Kim</user-name>
+              <user-message>left the group</user-message>
+              <user-link2><a href="#">Chess Club</a></user-link2>
+              <user-post>weeks ago</user-post>
+            </user-content>
+          </div>
         </div>
       </div>
     </main>
@@ -72,5 +135,16 @@
       <a href="https://www.frontendmentor.io/profile/for-dev9">Eren @For-Dev9</a
       >.
     </div>
+
+    <script>
+      function markAllRead() {
+        const unreadTags = document.querySelectorAll('.unread');
+        unreadTags.forEach((unreadTag) => {
+          unreadTag.classList.remove('unread');
+        });
+
+        document.getElementById('notification').innerHTML = '0';
+      }
+    </script>
   </body>
 </html>

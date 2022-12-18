@@ -32,6 +32,7 @@ html {
 a {
   color: var(--Dark-grayish-blue);
   transition: 0.3s ease-in;
+  text-decoration: none;
 }
 
 a:hover {
@@ -89,13 +90,98 @@ a:hover {
 }
 
 .content div {
-  background-color: var(--Very-light-grayish-blue);
   padding: 20px;
-  margin: 8px;
+  margin-bottom: 8px;
+  border-radius: 10px;
   display: flex;
-  column-gap: 10px;
+  justify-content: flex-start;
+  column-gap: 20px;
+}
+
+.bg.unread {
+  background-color: var(--Very-light-grayish-blue);
+}
+
+.mark.unread::after {
+  content: '\2022';
+  color: var(--Red);
+  width: 5px;
+  height: 5px;
 }
 
 .content div img {
-  width: 45px;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+user-content {
+  width: 100%;
+}
+
+user-name {
+  color: var(--Very-dark-blue);
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+user-message {
+  padding-right: 5px;
+}
+
+.imgRefer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--Gap);
+}
+
+.imgRefer img {
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+
+.imgRefer img:hover {
+  cursor: pointer;
+  border-color: var(--Light-grayish-blue-2);
+}
+
+user-link1 a {
+  color: var(--Dark-grayish-blue);
+  font-weight: bold;
+}
+
+user-link1 a:hover {
+  color: var(--Blue);
+  font-weight: bold;
+}
+
+user-link2 a {
+  color: var(--Blue);
+  font-weight: bold;
+}
+
+user-link2 a:hover {
+  color: var(--Blue);
+  font-weight: bold;
+}
+
+user-post {
+  display: block;
+  color: var(--Grayish-blue);
+  margin-top: 5px;
+}
+
+user-note {
+  display: block;
+  border: 1px solid var(--Light-grayish-blue-1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 8px;
+  transition: 0.3s;
+}
+
+user-note:hover {
+  background-color: var(--Light-grayish-blue-1);
+  cursor: pointer;
+  transition: 0.3s;
 }
