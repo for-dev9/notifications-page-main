@@ -189,7 +189,7 @@ user-note:hover {
 
 @media (max-width: 450px) {
   .main {
-    padding-top: 3px;
+    padding-top: 5px;
   }
   .attribution {
     flex-flow: column;
