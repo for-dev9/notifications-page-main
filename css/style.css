@@ -12,13 +12,15 @@
 }
 
 .attribution {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
   padding: 22px;
   font-family: 'tahoma';
   font-size: 13px;
   text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  column-gap: 5px;
 }
 
 body,
@@ -41,15 +43,13 @@ a:hover {
 }
 
 .main {
-  width: 100%;
-  height: 100%;
-  padding-top: 60px;
+  padding: 60px 5px 0px 5px;
 }
 
 .container {
   max-width: 700px;
   margin: auto;
-  padding: var(--Gap);
+  padding: var(--Gap) var(--Gap) 0 var(--Gap);
   border-radius: 15px;
   background-color: var(--White);
   font-family: 'Plus Jakarta Sans';
@@ -60,11 +60,12 @@ a:hover {
 .nav {
   display: flex;
   justify-content: space-between;
-  text-align: top;
+  align-items: center;
   padding-bottom: var(--Gap);
 }
 
 .nav h1 {
+  color: var(--Very-dark-blue);
   padding: 0px 10px 0px 0px;
   margin: 0px;
   display: inline;
@@ -74,7 +75,7 @@ a:hover {
   background-color: var(--Blue);
   display: inline-block;
   width: var(--Gap);
-  padding: 1px 0px 1px 0px;
+  padding: 4px 2px 4px 2px;
   border-radius: 5px;
   color: var(--White);
   font-weight: bold;
@@ -83,10 +84,6 @@ a:hover {
 
 .nav a {
   text-decoration: none;
-}
-
-.nav .notification h1 {
-  color: var(--Very-dark-blue);
 }
 
 .content div {
@@ -103,15 +100,34 @@ a:hover {
 }
 
 .mark.unread::after {
-  content: '\2022';
-  color: var(--Red);
-  width: 5px;
-  height: 5px;
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--Red);
 }
 
 .content div img {
   max-width: 50px;
   max-height: 50px;
+}
+
+.contentType2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--Gap);
+}
+
+.contentType2 img {
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+
+.contentType2 img:hover {
+  cursor: pointer;
+  border-color: var(--Light-grayish-blue-2);
 }
 
 user-content {
@@ -128,26 +144,10 @@ user-message {
   padding-right: 5px;
 }
 
-.imgRefer {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  gap: var(--Gap);
-}
-
-.imgRefer img {
-  border: 3px solid transparent;
-  border-radius: 10px;
-}
-
-.imgRefer img:hover {
-  cursor: pointer;
-  border-color: var(--Light-grayish-blue-2);
-}
-
 user-link1 a {
   color: var(--Dark-grayish-blue);
   font-weight: bold;
+  padding-right: 5px;
 }
 
 user-link1 a:hover {
@@ -158,6 +158,7 @@ user-link1 a:hover {
 user-link2 a {
   color: var(--Blue);
   font-weight: bold;
+  padding-right: 5px;
 }
 
 user-link2 a:hover {
@@ -184,4 +185,23 @@ user-note:hover {
   background-color: var(--Light-grayish-blue-1);
   cursor: pointer;
   transition: 0.3s;
+}
+
+@media (max-width: 450px) {
+  .main {
+    padding-top: 5px;
+  }
+  .attribution {
+    flex-flow: column;
+  }
+
+  .nav {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  .content div img {
+    max-width: 45px;
+    max-height: 45px;
+  }
 }

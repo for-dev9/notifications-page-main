@@ -24,6 +24,17 @@
     />
 
     <title>Frontend Mentor | Notifications page</title>
+
+    <script>
+      function markAllRead() {
+        const unreadTags = document.querySelectorAll('.unread');
+        unreadTags.forEach((unreadTag) => {
+          unreadTag.classList.remove('unread');
+        });
+
+        document.getElementById('notification').innerHTML = '0';
+      }
+    </script>
   </head>
   <body>
     <main class="main">
@@ -90,7 +101,7 @@
 
           <div class="bg">
             <img src="/assets/images/avatar-kimberly-smith.webp" />
-            <user-content class="imgRefer">
+            <user-content class="contentType2">
               <user-content>
                 <user-name>Kimberly Smith</user-name>
                 <user-message>commented on your picture</user-message>
@@ -101,7 +112,7 @@
           </div>
 
           <div class="bg">
-            <img src="/assets/images/avatar-jacob-thompson.webp" />
+            <img src="/assets/images/avatar-nathan-peterson.webp" />
             <user-content>
               <user-name>Nathan Peterson</user-name>
               <user-message>reacted to your recent post</user-message>
@@ -115,12 +126,12 @@
           </div>
 
           <div class="bg">
-            <img src="/assets/images/avatar-jacob-thompson.webp" />
+            <img src="/assets/images/avatar-anna-kim.webp" />
             <user-content>
               <user-name>Anna Kim</user-name>
               <user-message>left the group</user-message>
               <user-link2><a href="#">Chess Club</a></user-link2>
-              <user-post>weeks ago</user-post>
+              <user-post>2 weeks ago</user-post>
             </user-content>
           </div>
         </div>
@@ -128,23 +139,18 @@
     </main>
 
     <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a href="https://www.frontendmentor.io/profile/for-dev9">Eren @For-Dev9</a
-      >.
+      <div>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >.
+      </div>
+      <div>
+        Coded by
+        <a href="https://www.frontendmentor.io/profile/for-dev9"
+          >Eren @For-Dev9</a
+        >.
+      </div>
     </div>
-
-    <script>
-      function markAllRead() {
-        const unreadTags = document.querySelectorAll('.unread');
-        unreadTags.forEach((unreadTag) => {
-          unreadTag.classList.remove('unread');
-        });
-
-        document.getElementById('notification').innerHTML = '0';
-      }
-    </script>
   </body>
 </html>
