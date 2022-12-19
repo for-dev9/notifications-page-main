@@ -187,17 +187,30 @@ user-note:hover {
   transition: 0.3s;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 420px) {
+  .attribution {
+    flex-flow: column;
+  }
+
   .main {
     padding-top: 5px;
   }
-  .attribution {
-    flex-flow: column;
+
+  .container {
+    font-size: 14px;
   }
 
   .nav {
     flex-flow: column;
     align-items: flex-start;
+  }
+
+  .nav h1 {
+    font-size: 20px;
+  }
+
+  .nav a {
+    font-size: 14px;
   }
 
   .content div img {
